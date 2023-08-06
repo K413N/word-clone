@@ -22,6 +22,7 @@ html {
 */
 body {
   font-family: sans-serif;
+  color: white;
 }
 
 @media (max-height: 600px) {
@@ -33,17 +34,19 @@ body {
 button {
   margin: 0;
   padding: 0;
-  border: none;
+  border-color:rgb(58, 81, 104);
+  border-radius: 1px;
   background: transparent;
   cursor: pointer;
-  text-align: left;
-  color: inherit;
+  text-align: center;
+  color: white;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: rgb(15, 23, 31);
 }
 
 header {
