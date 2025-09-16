@@ -13,8 +13,14 @@ function HintRow({answer, guesses, setGuesses}) {
       let colorString = ""
       for(var i in item) {
         if (answer.includes(item[i])){
-          colorString = colorString + item[i]
+          //if the answer includes the letter, add letter to the string
+          if (item[i]=== answer[i]){
+            colorString = colorString + "🟩"
+          } else {
+            colorString = colorString + "🟨"
+          }
         } else {
+          //else add a black square emoji
           colorString = colorString + "⬛"
         }
       }
@@ -33,11 +39,11 @@ function HintRow({answer, guesses, setGuesses}) {
   return (
         <ul>
           {guesses.map((guess, index) => (
-            <div>
-             <li key={guess}>
+            <div key={index}>
+             <li >
                {guess}
              </li>
-             <li key={Math.random}>{guessColors[index]}</li>
+             <li >{guessColors[index]}</li>
             </div>
           ))}
         </ul>

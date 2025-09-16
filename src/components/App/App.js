@@ -8,6 +8,9 @@ import { WORDS } from '../../data';
 function App() {
   const [answer, setAnswer] = React.useState(sample(WORDS))
   const [guesses, setGuesses] = React.useState([]);
+
+console.log(answer)
+
   return (
     <div className="wrapper">
       <Header />
