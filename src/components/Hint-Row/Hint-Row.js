@@ -1,11 +1,16 @@
 import React from 'react';
 
-function Header() {
+function HintRow({guesses, setGuesses}) {
+  console.log(guesses)
   return (
-    <header>
-      <h1>Hints go here!</h1>
-    </header>
-  );
+        <ul>
+          {guesses.map(guess => (
+            <li key={guess}>
+              {guess}
+            </li>
+          ))}
+        </ul>
+      );
 }
 
-export default Header;
+export default HintRow;

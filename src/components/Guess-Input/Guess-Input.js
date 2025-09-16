@@ -6,8 +6,6 @@ function GuessInput({guesses, setGuesses}) {
 		const nextArr = [...guesses]
 		nextArr.push(guessInput)
 		setGuesses(nextArr)
-		console.log(guessInput)
-		console.log(guesses)
 		setGuessInput("");
 	};
 
