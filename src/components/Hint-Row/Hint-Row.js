@@ -7,7 +7,6 @@ function HintRow({answer, guesses, setGuesses}) {
   //const guessColors = ["🟩🟩🟩🟩🟩", "🟨🟨🟨🟨🟨", "⬛⬛⬛⬛⬛"]
 
   const guessColors = []
-
   
     const newGuesses = guesses.map((item) => {
       let colorString = ""
@@ -25,6 +24,9 @@ function HintRow({answer, guesses, setGuesses}) {
         }
       }
       guessColors.push(colorString)
+      if (colorString === "🟩🟩🟩🟩🟩") {
+        window.alert("you win!")
+      }
     })
   
   //guesses.map((word, wordindex) => (
