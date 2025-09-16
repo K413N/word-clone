@@ -10,8 +10,8 @@ const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
 console.info({ answer });
 
-function Game() {
-	return <GuessInput />;
+function Game({ guesses, setGuesses }) {
+	return <GuessInput guesses={guesses} setGuesses={setGuesses} />;
 }
 
 export default Game;

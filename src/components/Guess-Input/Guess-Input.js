@@ -1,18 +1,22 @@
 import React from "react";
 
-function GuessInput() {
+function GuessInput({guesses, setGuesses}) {
+	const [guessInput, setGuessInput] = React.useState("");
 	const handleSubmit = (event) => {
-		console.log(guessInput);
+		const nextArr = [...guesses]
+		nextArr.push(guessInput)
+		setGuesses(nextArr)
+		console.log(guessInput)
+		console.log(guesses)
 		setGuessInput("");
 	};
 
-	const [guessInput, setGuessInput] = React.useState("");
 
 	return (
 		<form
 			onSubmit={(event) => {
 				event.preventDefault();
-				handleSubmit();
+				handleSubmit(event);
 			}}
 			className="guess-input-wrapper"
 		>
