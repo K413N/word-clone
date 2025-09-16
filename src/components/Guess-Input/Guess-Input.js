@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({guesses, setGuesses}) {
+function GuessInput({answer, guesses, setGuesses}) {
 	const [guessInput, setGuessInput] = React.useState("");
 	const handleSubmit = (event) => {
 		const nextArr = [...guesses]
