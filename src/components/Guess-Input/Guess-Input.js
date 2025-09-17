@@ -1,12 +1,18 @@
 import React from "react";
 
-function GuessInput({answer, guesses, setGuesses}) {
+function GuessInput({answer, guesses, setGuesses, setNumTriesLeft, numTriesLeft}) {
 	const [guessInput, setGuessInput] = React.useState("");
 	const handleSubmit = (event) => {
 		const nextArr = [...guesses]
+		const nextTry = numTriesLeft - 1
 		nextArr.push(guessInput)
 		setGuesses(nextArr)
 		setGuessInput("");
+		setNumTriesLeft(nextTry)
+		if (numTriesLeft <= 1) {
+			window.alert("you lose!")
+			window.location.reload()
+		}
 	};
 
 

@@ -26,7 +26,9 @@ function HintRow({answer, guesses, setGuesses}) {
       guessColors.push(colorString)
       if (colorString === "🟩🟩🟩🟩🟩") {
         window.alert("you win!")
+        window.location.reload()
       }
+      
     })
   
   //guesses.map((word, wordindex) => (
