@@ -8,7 +8,7 @@ import { WORDS } from '../../data';
 function App() {
   const [answer, setAnswer] = React.useState(sample(WORDS))
   const [guesses, setGuesses] = React.useState([]);
-
+  const [triesLeft, setTriesLeft] = React.useState(6);
 console.log(answer)
 
   return (

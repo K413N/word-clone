@@ -42,10 +42,20 @@ function HintRow({answer, guesses, setGuesses}) {
         <ul>
           {guesses.map((guess, index) => (
             <div key={index}>
-             <li >
-               {guess}
-             </li>
-             <li >{guessColors[index]}</li>
+             <div>
+               
+                <div class="guess">
+                  <span class="cell">{guess[0]}</span>
+                  <span class="cell">{guess[1]}</span>
+                  <span class="cell">{guess[2]}</span>
+                  <span class="cell">{guess[3]}</span>
+                  <span class="cell">{guess[4]}</span>
+                </div>
+               
+             </div>
+             <div class="guess">
+             <span class="guess">{guessColors[index]}</span>
+             </div>
             </div>
           ))}
         </ul>
