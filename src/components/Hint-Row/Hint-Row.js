@@ -12,7 +12,7 @@ function HintRow({answer, guesses, setGuesses}) {
       let colorString = ""
       for(var i in item) {
         if (answer.includes(item[i])){
-          //if the answer includes the letter, add letter to the string
+          //if the answer includes the letter, set the corresponding emoji
           if (item[i]=== answer[i]){
             colorString = colorString + "🟩"
           } else {
